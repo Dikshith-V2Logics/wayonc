@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="about_boec" model="ir.ui.view">
+            <field name="name">About</field>
+            <field name="type">qweb</field>
+            <field name="key">theme_boec.about_boec</field>
+            <field name="arch" type="xml">
+                <t name="About" t-name="theme_boec.about_boec">
+                    <t t-call="website.layout">
+                        <div id="wrap">
+                            <Section class="banner_sub">
+                                <div class="wrapper">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="sub_page">
+                                                <div class="name">
+                                                    About
+                                                </div>
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="breadcrumb">
+                                                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                                        <i class="material-icons">&#xe315;</i>
+                                                        <li class="breadcrumb-item active" aria-current="page">About</li>
+                                                    </ol>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Section>
+                            <!-- About section ends here -->
+                            <div class="oe_structure">
+                            <section class="s_text_block pt32 pb32 o_colored_level" data-snippet="s_text_block" data-name="Text">
+                              <div class="container s_allow_columns">
+                                <p><b>WayOnc</b> - Investment Adivsor is one of the India's leading Advisory Company. It offers services regarding Equity, MCX,Currency,Forex with an experience of six years. WayOnc has contributed significantly to the growth and development of the Advisory Industry in India. We has carved a niche in the advisory sector due to its rich heritage, integrity, adherence to prudent practices, technology advancement, customised products and services and most of all due to its experienced, qualified and professional representatives.</p>
+                              </div>
+                            </section>
+                            <section class="s_title pt32 pb32 o_colored_level undefined o_cc o_cc2" data-vcss="001" data-snippet="s_title" data-name="Title">
+                              <div class="s_allow_columns container">
+                                <h1 style="text-align: center;">
+                                  <font style="font-size: 62px;">Why WayOnC?</font>
+                                </h1>
+                              </div>
+                            </section>
+                            <section class="s_process_steps pt24 pb24 o_colored_level undefined" data-snippet="s_process_steps" data-name="Steps">
+                              <div class="container">
+                                <div class="row no-gutters">
+                                  <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level">
+                                    <div class="s_process_step_icon">
+                                      <span>
+                                        <i class="fa fa-2x mx-auto rounded-circle bg-primary fa-user"/>
+                                      </span>
+                                    </div>
+                                    <div class="s_process_step_content text-center">
+                                      <h2>
+                                        <span id="docs-internal-guid-3ee7d4dd-7fff-63e9-ff46-3cb6e84bb5db">
+                                          <span style="font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Expertise in technical, fundamental Analysis &amp;amp; Research of Stock Markets.</span>
+                                        </span>
+                                        <br/>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level">
+                                    <div class="s_process_step_icon">
+                                      <span>
+                                        <i class="fa fa-2x mx-auto rounded-circle bg-o-color-5 fa-retweet" data-original-title="" title="" aria-describedby="tooltip553403"/>
+                                      </span>
+                                    </div>
+                                    <div class="s_process_step_content text-center">
+                                      <h2>
+                                        <span id="docs-internal-guid-e6f8aee7-7fff-0eda-befb-bd83ccbe3c41">
+                                          <span style="font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">15+ years of experience in wealth creation.</span>
+                                        </span>
+                                        <br/>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level">
+                                    <div class="s_process_step_icon">
+                                      <span>
+                                        <i class="fa fa-paypal fa-2x mx-auto rounded-circle bg-secondary" data-original-title="" title="" aria-describedby="tooltip812198"/>
+                                      </span>
+                                    </div>
+                                    <div class="s_process_step_content text-center">
+                                      <h2>
+                                        <span id="docs-internal-guid-7745b65c-7fff-3889-105b-54876e048d01">
+                                          <span style="font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Proper Risk Managed Recommendations and Tips.</span>
+                                        </span>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level undefined">
+                                    <div class="s_process_step_icon">
+                                      <span>
+                                        <i class="fa fa-2x mx-auto rounded-circle bg-o-color-3 fa-search" data-original-title="" title="" aria-describedby="tooltip599978"/>
+                                      </span>
+                                    </div>
+                                    <div class="s_process_step_content text-center">
+                                      <h2>
+                                        <span id="docs-internal-guid-837d5931-7fff-5c58-5048-6d9a9b0edcd6">
+                                          <span style="font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Highly Credible Research &amp;amp; Guidance.</span>
+                                        </span>
+                                        <br/>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_text_image" data-name="Text - Image" style="">
+                              <div class="container">
+                                <div class="row align-items-center">
+                                  <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <h2>Vision</h2>
+                                    <p>
+                                      <span style="color: rgb(32, 33, 36); font-family: Roboto, arial, sans-serif; font-size: 13px; white-space: pre-wrap;">We strive to be acknowledged as a leader in helping our clients succeed in the world’s rapidly evolving financial markets. We Endeavour to be valued as a leader in client satisfaction, service performance, financial strength &amp;amp; profitability. We work hard continuously to enhance our reputation for accessibility, professionalism, analysis &amp;amp; depth &amp;amp; quality of our long term consultative relationship with clients.</span>
+                                      <br/>
+                                    </p>
+                                    <p>
+                                      <a href="#" class="btn btn-primary mb-2" data-original-title="" title="" aria-describedby="tooltip132893">Learn more</a>
+                                    </p>
+                                  </div>
+                                  <div class="col-lg-6 pt16 pb16 o_colored_level" style="">
+                                    <img src="/web/image/316-5064543a/7300001.jpg" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip708791" data-original-id="313" data-original-src="/web/image/313-cb6578fd/7300001.jpg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_image_text" data-name="Image - Text" style="">
+                              <div class="container">
+                                <div class="row align-items-center">
+                                  <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <img src="/web/image/317-e937d364/3655101.jpg" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip720725" data-original-id="315" data-original-src="/web/image/315-ab2bab67/3655101.jpg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                  </div>
+                                  <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                    <h2>Mission</h2>
+                                    <p>
+                                      <span style="color: rgb(32, 33, 36); font-family: Roboto, arial, sans-serif; font-size: 13px; white-space: pre-wrap;">Investment Advisor work continuously on Training and updating staff and Executives, adopting new technology and improving infrastructure to give benefit to our customers. We are Equipped with Highly reliable software, tools, newswires, communication devices, internet, and technologies, well trained &amp;amp; qualified staff/representatives to protect clients investment and help them get good returns over years.</span>
+                                      <br/>
+                                    </p>
+                                    <p>
+                                      <a href="#" class="btn btn-primary mb-2 o_default_snippet_text">Discover more</a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                          <div class="container mt-4 mb-5">
+                            <div class="row">
+                              <div class="col-lg-7 col-xl-6 mr-lg-auto">
+                                <div class="oe_structure"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="oe_structure mt-2"/>
+                        </div>
+                        <!-- scroll counter -->
+                        
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="about_boec_page" model="website.page">
+            <field name="url">/about</field>
+            <field name="is_published">True</field>
+            <field name="view_id" ref="about_boec"/>
+            <field name="track">True</field>
+        </record>
+
+        <record id="menu_about_boec" model="website.menu">
+            <field name="name">About</field>
+            <field name="url">/about</field>
+            <field name="page_id" ref="theme_boec.about_boec_page"/>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+    </data>
+</odoo>
