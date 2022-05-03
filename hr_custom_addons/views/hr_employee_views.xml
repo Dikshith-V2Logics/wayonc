@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Employee View -->
+    <record id="hr_employee_view_form_custom_inherited" model="ir.ui.view">
+        <field name="name">custom.hr.employee.view.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/div[2]/h1" position="before">
+                <field name="emp_id"/>
+            </xpath>
+            <xpath expr="//field[@name='identification_id']" position="after">
+                <field name="pan_no"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
