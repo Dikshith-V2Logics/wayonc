@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_client_view_form" model="ir.ui.view">
+        <field name="name">res.client.form</field>
+        <field name="model">res.client</field>
+        <field name="arch" type="xml">
+        	<form string="Client Details">
+        		<sheet>
+                    <widget name="web_ribbon" title="Refused" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <h2 class="o_row">
+                            <div>
+                                <field name="name" placeholder="Price"/>
+                            </div>
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                        	<field name="client_name"/>
+                        	<field name="last_name" placeholder="Last Name"/>
+                        	<field name="partner_ref_id"/>
+                        	<field name="returns_percent"/>
+                        </group>
+                        <group>
+                        	<field name="company_id" invisible="1"/>
+                        	<field name="user_id" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids" options="{'open_attachments': True}"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="res_client_view_tree" model="ir.ui.view">
+        <field name="name">res.client.tree</field>
+        <field name="model">res.client</field>
+        <field name="arch" type="xml">
+        	<tree string="Client Details">
+        		<field name="name"/>
+        		<field name="client_name"/>
+        		<field name="partner_ref_id"/>
+        	</tree>
+        </field>
+    </record>
+
+    <record id="res_client_action" model="ir.actions.act_window">
+        <field name="name">Clients Details</field>
+        <field name="res_model">res.client</field>
+        <field name='view_mode'>tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new records
+            </p>
+        </field>
+    </record>
+    	<menuitem id="direct_investment_menu" name="Direct Investment" parent="base_investment_menu">
+    		<menuitem id="res_clients_menu" name="Clients" action="res_client_action" sequence="1"/>
+    	</menuitem>
+</odoo>

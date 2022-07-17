@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_processing_charges_rule_user,processing_charges_rule,model_processing_charges_rule,,1,1,1,0
+
+access_res_client_user,res_client,model_res_client,,1,1,1,0

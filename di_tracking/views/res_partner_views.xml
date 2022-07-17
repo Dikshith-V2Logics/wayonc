@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Res Client -->
+    <record  model="ir.actions.act_window" id="action_res_client_active">
+        <field name="name">Investor</field>
+        <field name="res_model">res.client</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('di_tracking.res_client_view_tree')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('di_tracking.res_client_view_form')})]"/>
+        <field name="domain">[('partner_ref_id', '=', active_id)]</field>
+    </record>
+
+    <!-- Res Partner-->
+    <record id="view_partner_form_custom_inherited" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button type="action" class="oe_inline oe_stat_button" name="%(di_tracking.action_res_client_active)d" icon="fa-bars" attrs="{'invisible':[('res_client_count','=',0)]}">
+                    <field name="res_client_count" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//span[@name='address_name']" position="before">
+            	<label for="is_investor" string="Is Investor"/>
+            	<div class="investor">
+	                <field name="is_investor" attrs="{'readonly':[('investment_app_created','=',True)]}"/>
+	                <field name="investment_app_created"/>
+	                <button name="action_create_investor" string="Confirm" type="object" class="oe_highlight" attrs="{'invisible':['|',('is_investor','=',False),('investment_app_created','=',True)]}"/>
+	            </div>
+            </xpath>
+        </field>
+    </record>
+
+    
+</odoo>
