@@ -1,0 +1,103 @@
+sudo ssh root@hwsrv-963532.hostwindsdns.com
+yptRvxyQDnT8CbmSc
+
+tNEB1EM8OdCXDVtF
+
+masterpassword - admin@wayonc.com
+
+admin login - greeshma17@gmail.com
+password - greeshma1727
+
+dikshith@v2logicsystems.com
+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
+
+HOSTNAME	hwsrv-963532.hostwindsdns.com
+PRIMARY IP	23.254.229.9
+ASSIGNED IPS	2a0d:7c40:3000:4c4::2
+NAMESERVERS	mdns5.hostwindsdns.com
+mdns6.hostwindsdns.com
+
+
+
+Done! The Odoo server is up and running. Specifications:
+Port: 8069
+User service: odoo14
+Configuraton file location: /etc/odoo14-server.conf
+Logfile location: /var/log/odoo14
+User PostgreSQL: odoo14
+Code location: odoo14
+Addons folder: odoo14/odoo14-server/addons/
+Password superadmin (database): rw2WILc11GlAMQXG
+Start Odoo service: sudo service odoo14-server start
+Stop Odoo service: sudo service odoo14-server stop
+Restart Odoo service: sudo service odoo14-server restart
+Nginx configuration file: /etc/nginx/sites-available/odoo
+
+--- Auto start setup-----
+sudo nano /etc/systemd/system/odoo14-server.service
+[Unit]
+   Description=Odoo
+   Documentation=http://www.odoo.com
+   [Service]
+   # Ubuntu/Debian convention:
+   Type=simple
+   User=odoo14
+   ExecStart=/opt/odoo14/odoo14-server/odoo-bin -c /etc/odoo14-server.conf
+   [Install]
+   WantedBy=default.target
+
+sudo chmod 755 /etc/systemd/system/odoo14-server.service
+sudo chown root: /etc/systemd/system/odoo14-server.service
+sudo systemctl start odoo14-server.service 
+sudo systemctl stop odoo14-server.service 
+sudo systemctl restart odoo14-server.service
+
+------Website-----
+sudo apt-get update
+sudo apt-get install apache2
+sudo mkdir -p /var/www/wayonc.com/public_html
+sudo chown -R $USER:$USER /var/www/wayonc.com/public_html
+sudo chmod -R 755 /var/www
+cd /var/www/wayonc.com/public_html
+----place index page here-----
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/wayonc.com.conf
+sudo nano /etc/apache2/sites-available/wayonc.com.conf
+<VirtualHost *:8080>
+	ServerAdmin info@wayonc.com
+	ServerName wayonc.com
+	ServerAlias www.wayonc.com
+	DocumentRoot /var/www/wayonc.com/public_html
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+sudo a2ensite wayonc.com.conf
+sudo a2dissite 000-default.conf
+sudo service apache2 restart
+
+-----next point ip to addess
+
+sudo nano /etc/hosts
+	192.168.47.201 wayonc.com
+		
+
+
+--change apache port 
+sudo nano /etc/apache2/ports.conf
+
+# If you just change the port or add more ports here, you will likely also
+# have to change the VirtualHost statement in
+# /etc/apache2/sites-enabled/000-default.conf
+
+Listen 8080
+
+<IfModule ssl_module>
+        Listen 443
+</IfModule>
+
+<IfModule mod_gnutls.c>
+        Listen 443
+</IfModule>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
